@@ -1,12 +1,14 @@
 import sys
 import time
+import random
 
 
 class Benchmark:
-    def __init__(self, interval: int, n1: int = 6, n2: int = 24):
+    def __init__(self, interval: int):
         self.interval = interval
-        self.n1 = n1
-        self.n2 = n2
+
+        self.n1 = random.randint(-100, 100)
+        self.n2 = random.randint(-100, 100)
 
     def add(self) -> float:
         start = time.time()
